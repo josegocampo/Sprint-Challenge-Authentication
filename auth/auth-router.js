@@ -7,8 +7,9 @@ const Users = require('./auth-model')
 router.post('/register', async (req, res, next) => {
     try{
         const {username} = req.body
+        console.log(req.body)
         const user = await Users.findBy({username}).first()
-      
+        
         if (user){
           return res.status(409).json({
               message: "Username is already taken"
@@ -27,7 +28,7 @@ router.post('/login', async (req, res, next) => {
    const authError = {
       message: "Invalid Credentials"
    }
-
+     console.log(req.body)
    try{
       const user = await Users.findBy({ username: req.body.username }).first()
         if (!user){
