@@ -40,11 +40,21 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+Storing data and persisting if for requests for every single user.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+bcrypt hashes your passwords, helping protecting them by applying an algorith that will turn it into a random string. also uses salt and rounds to make it even more secure.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+Adds salt to the hashed password, which is a random string that will get added to the hash which makes it even harder to decypher, and also adds rounds, which rehash the password each time after a certain ammount of time. 
+
 - [ ] What are the three parts of the JSON Web Token?
+
+Header
+Payload
+Signature
 
 ## Minimum Viable Product
 
